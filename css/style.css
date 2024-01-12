@@ -3,6 +3,7 @@
     --navbar-width: 64px;
     --color: grey;
     --contrast-color: rgb(0, 240, 60);
+    --width: calc(800vw + 15000px);
 }
 
 .section {
@@ -21,7 +22,7 @@
     position: fixed;
     top: 69px;
     left: 69px;
-    height: fit-content;
+    height: calc(100vh - ((64px) * 2));;
     width: calc(100vw - ((64px + 5px) * 2));
     overflow-y: hidden;
     overflow-x: visible;
@@ -103,7 +104,7 @@
 
 .city {
     position: relative;
-    width: 800vw;
+    width: var(--width);
     height: calc(((100vh - ((64px + 5px) * 2)) * 43) / 75);
     background-image: url("../city.png");
     background-size: contain;
@@ -112,7 +113,7 @@
 }
 .road {
     position: relative;
-    width: 800vw;
+    width: var(--width);
     height: calc(((100vh - ((64px + 5px) * 2)) * 32) / 75);
     background-image: url("../road.png");
     background-size: contain;
@@ -122,8 +123,6 @@
 
 .car {
     position: fixed;
-    top: 65vh;
-    left: 10vw;
 }
 .car img {
     height: 6rem;

@@ -13,8 +13,11 @@ document.querySelectorAll(".hidden").forEach((e => showobserver.observe(e)));
 
 const scrollbar = document.querySelector(".scrollbar");
 const content = document.querySelector('.content');
+const road = document.querySelector('.road');
 
-const car = document.querySelector('.car img');
+
+const car = document.querySelector('.car');
+const carImg = document.querySelector('.car img');
 
 let framebuffer = 3;
 let frame = 0;
@@ -25,7 +28,12 @@ function animate() {
 
     var factor = scrollbar.scrollLeft / (scrollbar.scrollWidth - scrollbar.clientWidth);
 
-    content.scroll((content.scrollWidth - content.clientWidth) * factor, 0, "smooth");
+    content.scroll((content.scrollWidth - content.clientWidth - 15000) * factor, 0, "smooth");
+
+    road.style.left = `${-15000 * factor}px`;
+
+    car.style.left = `${7 + 63 * factor}vw`;
+    car.style.top = `${road.getBoundingClientRect().y + 64}px`;
 
     if (frame < framebuffer) {
         frame++;
@@ -34,10 +42,10 @@ function animate() {
         frame = 0;
         if (currentcar > 2) {
             currentcar = 1;
-            car.src = `car${currentcar}.png`;
+            carImg.src = `car${currentcar}.png`;
         } else {
             currentcar++;
-            car.src = `car${currentcar}.png`;
+            carImg.src = `car${currentcar}.png`;
         }
     }
 };
