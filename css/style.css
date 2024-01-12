@@ -1,0 +1,130 @@
+/* Set global variables */
+:root {
+    --navbar-width: 64px;
+    --color: grey;
+    --contrast-color: rgb(0, 240, 60);
+}
+
+.section {
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 10px;
+    box-shadow: 2px 2px 5px 7px rgba(255, 255, 255, 0.5);
+}
+
+.section-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.content {
+    position: fixed;
+    top: 69px;
+    left: 69px;
+    height: fit-content;
+    width: calc(100vw - ((64px + 5px) * 2));
+    overflow-y: hidden;
+    overflow-x: visible;
+    background: rgba(255, 255, 255, 0.2);
+}
+
+.content::-webkit-scrollbar {
+    width: 0;
+}
+
+.text {
+    display: grid;
+    grid-template-rows: repeat(20, 1fr);
+    grid-template-columns: repeat(20, 1fr);
+}
+
+.text > * {
+    margin: 1rem;
+    width: 30rem;
+    padding: 1rem;
+    background-color: rgba(0, 0, 0, 0.5);
+    box-shadow: 0 0 2px 3px var(--contrast-color);
+}
+
+.text > *.hidden-top {
+    margin-right: 65rem;
+    grid-row: 2 / span 8;
+}
+
+.text > *.hidden-bottom {
+    margin-left: 50rem;
+    grid-row: 10 / span 8;
+}
+
+/* Design Scrollbar */
+
+.scrollbar {
+    --width: 75vw;
+    position: absolute;
+    overflow-y: hidden;
+    overflow-x: scroll;
+    top: calc(var(--navbar-width) - 56px);
+    left: calc(var(--navbar-width) + ((100vw - 10px - (var(--navbar-width) * 2) - var(--width)) / 2));
+    width: var(--width);
+    height: 50px;
+    z-index: 99;
+}
+
+.scrollbar div {
+    width: 300vw;
+    display: block;
+}
+
+.scrollbar::-webkit-scrollbar {
+    height: 50px;
+}
+
+.scrollbar::-webkit-scrollbar-track {
+    background: #a4a4a4;
+    border-radius: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+    background: rgb(60, 60, 60);
+    border-radius: 10px;
+}
+
+.scrollbar::-webkit-scrollbar-thumb:hover {
+    background: rgb(65, 65, 65);
+}
+
+.scrollbar::-webkit-scrollbar-thumb:active {
+    background: rgb(70, 70, 70);
+}
+
+.background {
+    position: absolute;
+}
+
+.city {
+    position: relative;
+    width: 800vw;
+    height: calc(((100vh - ((64px + 5px) * 2)) * 43) / 75);
+    background-image: url("../city.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    z-index: -1;
+}
+.road {
+    position: relative;
+    width: 800vw;
+    height: calc(((100vh - ((64px + 5px) * 2)) * 32) / 75);
+    background-image: url("../road.png");
+    background-size: contain;
+    background-repeat: repeat-x;
+    z-index: -1;
+}
+
+.car {
+    position: fixed;
+    top: 65vh;
+    left: 10vw;
+}
+.car img {
+    height: 6rem;
+}

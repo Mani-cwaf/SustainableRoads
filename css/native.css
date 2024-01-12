@@ -1,0 +1,65 @@
+.hidden {
+    opacity: 0;
+    filter: blur(10px);
+    transition: all var(--animation-delay) ease-out;
+}
+
+.hidden-top {
+    transform: translate(10rem, 15vh);
+}
+
+.hidden-bottom {
+    transform: translate(10rem, -15vh);
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+    transform: translate(0, 0);
+}
+
+.no-touch,
+span.link {
+    pointer-events: none;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+}
+
+button {
+    display: inline-block;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 2px solid rgb(55, 55, 55);
+    border-radius: 6px;
+    box-shadow: rgba(27, 31, 35, 0.04) 0 2px 0, rgba(255, 255, 255, 0.25) 0 2px 0 inset;
+    box-sizing: border-box;
+    color: var(--contrast-color);
+    font-family: inherit;
+    font-display: swap;
+    font-weight: 500;
+    line-height: 20px;
+    list-style: none;
+    padding: 3px 8px;
+    position: relative;
+    transition: first-background-color 0.2s cubic-bezier(0.3, 0, 0.5, 1);
+    user-select: none;
+    touch-action: manipulation;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-top: 5px;
+}
+
+button:hover {
+    background-color: rgba(255, 255, 255, .2);
+    text-decoration: none;
+    transition-duration: 0.1s;
+    outline: 1px transparent;
+    transform: translateY(-1.25px);
+}
+
+body {
+    overflow: hidden;
+    font-family: 'Kanit', sans-serif;
+    color: var(--contrast-color);
+}
