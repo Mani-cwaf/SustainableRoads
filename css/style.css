@@ -222,3 +222,9 @@
 .car img {
     height: calc(6 * var(--scale));
 }
+
+@media (max-height: 640px) {
+    :root {
+        --scale: 10px
+    }
+}
