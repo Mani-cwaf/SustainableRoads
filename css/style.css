@@ -3,7 +3,8 @@
     --navbar-width: 64px;
     --color: grey;
     --contrast-color: rgb(0, 240, 60);
-    --width: calc(950vw + 15000px);
+    --width: calc((900 * var(--scale)) + 15000px);
+    --scale: 15px;
 }
 
 /* Design content */
@@ -30,16 +31,16 @@
 }
 
 .text > * {
-    margin: 1rem 25rem 1rem 5rem;
-    width: 40rem;
+    margin: calc(1 * var(--scale)) calc(25 * var(--scale)) calc(1 * var(--scale)) calc(5 * var(--scale));
+    width: calc(40 * var(--scale));
     height: fit-content;
-    padding: 1rem;
+    padding: calc(1 * var(--scale));
     background-color: rgba(0, 0, 0, 0.65);
     box-shadow: 0 0 2px 3px var(--contrast-color);
 }
 
 .text > p {
-    font-size: 1.35rem;
+    font-size: calc(1.35 * var(--scale));
     font-weight: 600;
 }
 
@@ -64,22 +65,22 @@
 }
 
 .section-title {
-    font-size: 2.5rem;
+    font-size: calc(2.5 * var(--scale));
     font-weight: bold;
 }
 
 .end {
-    margin-left: 15rem;
+    margin-left: calc(15 * var(--scale));
     text-align: center;
 }
 
 .end > h1 {
-    font-size: 5rem;
+    font-size: calc(5 * var(--scale));
     margin: 0;
     padding: 0;
 }
 .end > p {
-    font-size: 1.5rem;
+    font-size: calc(1.5 * var(--scale));
     margin: 0;
     padding: 0;
 }
@@ -99,14 +100,14 @@
 
 .quiz-title {
     text-align: center;
-    font-size: 3.5rem;
+    font-size: calc(3.5 * var(--scale));
     font-weight: 900;
     margin: 0;
 }
 
 .question {
     text-align: center;
-    font-size: 2.25rem;
+    font-size: calc(2.25 * var(--scale));
     font-weight: 600;
     margin: 0;
 }
@@ -119,17 +120,17 @@
 }
 
 .option {
-    margin: 1rem;
-    padding: 1.75rem 1rem 1.75rem 1rem;
-    font-size: 1.5rem;
+    margin: calc(1 * var(--scale));
+    padding: calc(1.75 * var(--scale)) calc(1 * var(--scale)) calc(1.75 * var(--scale)) calc(1 * var(--scale));
+    font-size: calc(1.5 * var(--scale));
     font-weight: 600;
 }
 
 .result {
-    margin: 1rem;
-    padding: 1rem;
+    margin: calc(1 * var(--scale));
+    padding: calc(1 * var(--scale));
     text-align: center;
-    font-size: 5rem;
+    font-size: calc(5 * var(--scale));
     font-weight: 600;
 }
 
@@ -142,8 +143,8 @@
 }
 
 .end-result > * {
-    margin-top: 10rem;
-    font-size: 3rem;
+    margin-top: calc(10 * var(--scale));
+    font-size: calc(3 * var(--scale));
     font-weight: 800;
     text-align: center;
 }
@@ -219,5 +220,5 @@
     position: fixed;
 }
 .car img {
-    height: 6rem;
+    height: calc(6 * var(--scale));
 }

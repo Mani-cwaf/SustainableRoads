@@ -5,11 +5,11 @@
 }
 
 .hidden-top {
-    transform: translate(10rem, 15vh);
+    transform: translate(calc(10 * var(--scale)), 15vh);
 }
 
 .hidden-bottom {
-    transform: translate(10rem, -15vh);
+    transform: translate(calc(10 * var(--scale)), -15vh);
 }
 
 .show {
@@ -28,9 +28,9 @@
 
 a {
     color: rgb(77, 255, 74);
-    margin: 0.15rem;
+    margin: calc(0.15 * var(--scale));
     padding: 0 5px 0 5px;
-    border-radius: 0.5rem;
+    border-radius: calc(0.5 * var(--scale));
     box-shadow: 0 0 4px 4px rgba(3, 151, 0, 0.25);
     text-decoration: none;
     /* no underline */

@@ -110,12 +110,12 @@ nav {
 
 .logo-container {
     display: flex;
-    margin: 0.5rem 0 0 5rem;
+    margin: calc(0.5 * var(--scale)) 0 0 calc(5 * var(--scale));
 }
 
 .title {
     margin: 0;
-    font-size: 3rem;
+    font-size: calc(3 * var(--scale));
     width: 100vw;
     text-align: center;
 }
