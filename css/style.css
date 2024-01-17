@@ -3,7 +3,7 @@
     --navbar-width: 64px;
     --color: grey;
     --contrast-color: rgb(0, 240, 60);
-    --width: calc((900 * var(--scale)) + 15000px);
+    --width: calc((930 * var(--scale)) + 15000px);
     --scale: 15px;
 }
 
