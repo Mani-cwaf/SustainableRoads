@@ -32,7 +32,7 @@ function animate() {
 
     road.style.left = `${-15000 * factor}px`;
 
-    car.style.left = `${7 + 63 * factor}vw`;
+    car.style.left = `${(6 + 70 * factor)}vw`; // here we can find the position of the car
     car.style.top = `${road.getBoundingClientRect().y + 64}px`;
 
     if (frame < framebuffer) {

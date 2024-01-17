@@ -18,13 +18,22 @@
     transform: translate(0, 0);
 }
 
-.no-touch,
-span.link {
+.no-touch {
     pointer-events: none;
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+}
+
+a {
+    color: rgb(77, 255, 74);
+    margin: 0.15rem;
+    padding: 0 5px 0 5px;
+    border-radius: 0.5rem;
+    box-shadow: 0 0 4px 4px rgba(3, 151, 0, 0.25);
+    text-decoration: none;
+    /* no underline */
 }
 
 button {

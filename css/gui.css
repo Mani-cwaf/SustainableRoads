@@ -119,3 +119,9 @@ nav {
     width: 100vw;
     text-align: center;
 }
+
+/* Design Indicators */
+
+.indicators {
+    position: absolute;
+}
